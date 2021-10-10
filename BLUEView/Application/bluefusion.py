@@ -714,5 +714,5 @@ def main():
 
     win.mainloop()
 
-if __name__=="FusionGUI":
+if __name__=="bluefusion":
     main()
