@@ -1,4 +1,4 @@
-import GUIDesign
+import bluefusion
 
 #########################################
 #Files required:
@@ -9,4 +9,4 @@ import GUIDesign
 #########################################
 
 # Initialize and run the application
-GUIDesign
+bluefusion
