@@ -23,7 +23,7 @@
       * gunzip Homo_sapiens.GRCh38.100.gtf.gz
 
 <h2>USING THE APPLICATION</h2>
-<strong>Please note that this application leverages the 'pysam' library which no longer functions on Windows.</strong>
+<strong>Please note that this application leverages the 'pysam' library which no longer functions on Windows.</strong><br>
 <strong>***Tested on Linux***</strong>
 
 <h3>BAM ONLY:</h3>
