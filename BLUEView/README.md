@@ -8,7 +8,7 @@
   * Python Applciation Scripts
     * bluefusion.py is the main script that generates the GUI and communicates with all subsequent modules
     * InitDNAFiles.py loads in related files such as genomes, BAM files, and chromosomes
-    * samfile.py parses BAM a file and returns relevant information such as fusion reads, contigs, etc.
+    * samfile.py parses a BAM file and returns relevant information such as fusion reads, contigs, etc.
   * Chromosomes folder
     * Place for the Homo_sapiens.GRCh38.dna.chromosome fils
     * They are too big and need to be download and place in this folder manually
