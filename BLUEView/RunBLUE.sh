@@ -1,3 +1,3 @@
 #!/bin/bash
 cd Application
-python3 BLUE.py
+python3 bluefusion.py
