@@ -9,6 +9,14 @@ from tkinter import ttk
 from tkinter import filedialog
 from tkinter import messagebox
 
+#########################################
+#Files required:
+#Annotation file
+#****ftp://ftp.ensembl.org/pub/release-100/gtf/homo_sapiens/Homo_sapiens.GRCh38.100.gtf.gz
+#BAM file & Index file
+#****Tested with 'ACADM-PARK7.sam.sorted.bam'
+#########################################
+
 # GUI related funtions
 def on_release(event):
     event.widget.config(cursor="")
