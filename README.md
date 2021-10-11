@@ -23,7 +23,8 @@
       * gunzip Homo_sapiens.GRCh38.100.gtf.gz
 
 <h2>USING THE APPLICATION</h2>
-<strong>Please note that this application leverages the 'pysam' library which no longer functions on Windows. ***Tested on Linux***</strong>
+<strong>Please note that this application leverages the 'pysam' library which no longer functions on Windows.</strong>
+<strong>***Tested on Linux***</strong>
 
 <h3>BAM ONLY:</h3>
 To use this application, simply select a BAM file from the 'File' dropdown and the program will read it. If a fusion is found, the reads will be displayed in the Fusion Area in the middle of the application. The first fusion gene will be displayed and color coded on the left side, while the second will show up on the right. Positions mark the start of the base that follows and each 'marker' is 5 bases in length.
