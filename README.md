@@ -1,7 +1,6 @@
 <h2>OVERVIEW</h2>
-This application takes a BAM file submitted by a user, parses it and displays all fusion genes located. Fusion genes are displayed and color coded with a summary and additional information on each gene. Additionally, a viewer for chromosomes has been developed to allow the user to load in a human chromosome and display it in the Chrom-View. Both the fusion and chromosome viewers are able to be dragged left and right to view the rest of the reads along with their positions.
-<br>
-<br>
+This application takes a BAM file submitted by a user, parses it and displays all fusion genes located. Fusion genes are displayed and color coded with a summary and additional information on each gene. Additionally, a viewer for chromosomes has been developed to allow the user to load in a human chromosome and display it in the Chrom-View. Both the fusion and chromosome viewers are able to be dragged left and right to view the rest of the reads along with their positions.<br></br>
+
 * RunBLUE.sh is the bash script that runs the application
   * To run: Open linux terminal, set directory to checkout folder and execute command ./RunBLUE.sh
     * You may encounter missing package. Install any that are not found
