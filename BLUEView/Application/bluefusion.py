@@ -33,8 +33,8 @@ DEFAULT_THEME = "lightsteelblue1"  # The color of the application
 class FusionGUI:
     """
     The Fusion GUI is initialized using the runblue method.
-    This application uses classes found in DNAFiles.py (class InitFiles)
-    and samfile.py (class BAM).
+    This application is used in conjuction with samfile.py which
+    parses bam files and displays any findings on the GUI.
 
     NOTE: samfile import uses pysam library to parse BAM files which
     has been depricated on Windows and will run on Linux and MacOS.
