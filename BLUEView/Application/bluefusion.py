@@ -1,6 +1,5 @@
 import samfile
 import tkinter as tk
-# import InitDNAFiles
 import webbrowser
 
 from tkinter import *
