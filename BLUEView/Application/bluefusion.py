@@ -1,4 +1,3 @@
-import samfile
 import tkinter as tk
 import webbrowser
 
