@@ -1,9 +1,6 @@
 <h1>Binary Locus Universal Extraction: Visualizing Fusion Genes</h1>
 This application takes a BAM file submitted by a user, parses it and displays all fusion genes located. Fusion genes are displayed and color coded with a summary and additional information on each gene. Additionally, a viewer for chromosomes has been developed to allow the user to load in a human chromosome and display it in the Chrom-View. Both the fusion and chromosome viewers are able to be dragged left and right to view the rest of the reads along with their positions. More information on using the application along with the file structure is found below.<br></br>
 
-* RunBLUE.sh is the bash script that runs the application
-  * To run: Open linux terminal, set directory to checkout folder and execute command ./RunBLUE.sh
-    * You may encounter missing package. Install any that are not found
 * BLUE comes with sample BAM files to test with in the "Sample BAM" folder
 * Application folder contains the following:
   * Python Applciation Scripts
