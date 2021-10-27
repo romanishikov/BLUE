@@ -814,7 +814,3 @@ class AdditionalFunctions(FusionGUI):
         subWin.attributes("-topmost", True)
         subWin.resizable(False, False)
         subWin.mainloop()
-
-
-# if __name__ == "__main__":
-#     FusionGUI().runblue()
