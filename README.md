@@ -8,13 +8,13 @@ This application takes a BAM file submitted by a user, parses it and displays al
     * samfile.py parses a BAM file and returns relevant information such as fusion reads, contigs, etc.
   * Chromosomes folder
     * Place for the Homo_sapiens.GRCh38.dna.chromosome fils
-    * They are too big and need to be download and place in this folder manually
+    * They are too large to share and need to be downloaded and placed in this folder manually
     * Downloads
     * wget ftp://ftp.ensembl.org/pub/release-100/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.{1..22}.fa.gz
     * wget ftp://ftp.ensembl.org/pub/release-100/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.{X,Y}.fa.gz
   * Genomes (GTF Reference file(s))
     * Place for the Homo_sapiens.GRCh38.100.db and Homo_sapiens.GRCh38.100.gtf
-    * They are large and need to be downloaded and placed in this folder manually
+    * They are too large to share and need to be downloaded and placed in this folder manually
       * Download and unzip
       * wget ftp://ftp.ensembl.org/pub/release-100/gtf/homo_sapiens/Homo_sapiens.GRCh38.100.gtf.gz
       * gunzip Homo_sapiens.GRCh38.100.gtf.gz
