@@ -296,9 +296,6 @@ class MouseFunctions(FusionGUI):
         chrom_seq = self.GUI.chrom_area.get(chrom_indx, END)
         chrom_seq = chrom_seq.strip(" \n")
 
-        if CHROMOSOME_SEQ == "":
-            return "Cannot move Chrom-Viewer: No sequence loaded."
-
         relative_pos = CHROMOSOME_SEQ.find(chrom_seq)  # Find the chromosome position only if initialized
 
         event.widget.scan_dragto(event.x, 0)  # This moves the viewer by dragging it
