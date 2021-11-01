@@ -296,9 +296,7 @@ class MouseFunctions(FusionGUI):
         chrom_seq = self.GUI.chrom_area.get(chrom_indx, END)
         chrom_seq = chrom_seq.strip(" \n")
 
-        try:
-            CHROMOSOME_SEQ
-        except NameError:
+        if CHROMOSOME_SEQ == "":
             return "Cannot move Chrom-Viewer: No sequence loaded."
 
         relative_pos = CHROMOSOME_SEQ.find(chrom_seq)  # Find the chromosome position only if initialized
@@ -345,7 +343,7 @@ class SearchFunctions(FusionGUI):
     def search_position(self, entered):
         entered = entered.replace(",", "")  # Format the position in case of commas
         if entered.strip() == "":
-            return
+            return  # Blank search will do nothing
 
         if CHROMOSOME_SEQ != "":  # Check first to see if the chromosome has been loaded
             if not str(entered).isnumeric() and GENOME_LOADED:  # If reference is loaded we can find position by gene name
@@ -359,10 +357,10 @@ class SearchFunctions(FusionGUI):
                 try:  # Attempt to go to entered position. If out of bounds it will alert the user.
                     AppendFunctions(self.GUI).insert_chrom_seq(CHROMOSOME_SEQ, chrom_region_start, chrom_region_end, True)
                 except Exception as Ex:
-                    Messages().display_msg(str(Ex))
+                    Messages.display_msg(str(Ex))
                     pass
             elif not GENOME_LOADED:
-                Messages().display_msg("Please load the reference file before searching by gene name.")
+                Messages.display_msg("Please load the reference file before searching by gene name.")
 
         if BAM_LOADED:  # Check if bam file has been loaded, if so, go to the position in the fusion viewer if exists
             fuse_pos, fuse_len = BAMParser().get_fusions()
@@ -486,7 +484,7 @@ class MenuFunctions(FusionGUI):
                 CHROMOSOME_SEQ = BAMParser().get_chromosome_seq()
                 AppendFunctions(self.GUI).insert_chrom_seq(CHROMOSOME_SEQ, CHROM_START, CHROM_END, True)
             except Exception as Ex:
-                Messages().display_error("Error loading chromosome. " + str(Ex) +
+                Messages.display_error("Error loading chromosome. " + str(Ex) +
                                          "Please make sure you have the correct chromosome file: " + file)
 
     # Open and Load BAM File
@@ -501,7 +499,7 @@ class MenuFunctions(FusionGUI):
                 AppendFunctions(self.GUI).insert_reads(init.reads)  # Load in read information into the display
                 BAM_LOADED = True
             except Exception as Ex:
-                Messages().display_error("Error loading BAM file. " + str(Ex) +
+                Messages.display_error("Error loading BAM file. " + str(Ex) +
                                          ". Please make sure bai file exists in the same location as the BAM.")
 
     # Open and Load Genome
@@ -526,7 +524,7 @@ class MenuFunctions(FusionGUI):
                     ResetFunctions(self.GUI).reset_reads()
                     BAMParser().map_fusion_reads()
             except Exception as Ex:
-                Messages().display_error("Error loading GTF file. " + str(Ex) +
+                Messages.display_error("Error loading GTF file. " + str(Ex) +
                                 "The file may be downloaded at this address: "
                                 "ftp://ftp.ensembl.org/pub/release-100/gtf/homo_sapiens/Homo_sapiens.GRCh38.100.gtf.gz")
 
@@ -814,3 +812,7 @@ class AdditionalFunctions(FusionGUI):
         subWin.attributes("-topmost", True)
         subWin.resizable(False, False)
         subWin.mainloop()
+
+
+if __name__ == "__main__":
+    FusionGUI().runblue()
